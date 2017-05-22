@@ -8,9 +8,11 @@ public class TheLowestAbstractValue {
         int theLowestValue = Integer.MAX_VALUE;
 
         for (int i = 0; i < myArray.length; i++) {
-            if (Math.abs(myArray[i] < theLowestValue)) {    // tu sie krzaczy!
+            /* porównuje wartość bezwzględną obecnego elementu tablicy z obecną wartością theLowestValue
+            i przypisuję do theLowestValue mniejszą liczbę */
+            if ((Math.abs(myArray[i])) < theLowestValue) { // brakowało nawiasów, przez co całe wyrazenie źle sie liczylo
                 theLowestValue = myArray[i];
-            } else if (Math.abs(myArray[i] == theLowestValue)) {   // tu sie krzaczy!
+            } else if ((Math.abs(myArray[i])) == theLowestValue) { // brakowało nawiasów, przez co całe wyrazenie źle sie liczylo
                 theLowestValue = Math.min(theLowestValue, myArray[i]);
             }
         }
@@ -21,5 +23,7 @@ public class TheLowestAbstractValue {
         TheLowestAbstractValue tlav = new TheLowestAbstractValue();
         int result = tlav.count(new int[]{2, -2, 5, -6, 8});
         System.out.println(result);
+        int res2 = tlav.count(new int[]{7, 13, 6, -6, 15});
+        System.out.println(res2);
     }
 }
