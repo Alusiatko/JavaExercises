@@ -3,15 +3,15 @@ package random;
 import java.util.HashMap;
 import java.util.Map;
 
-// jeszcze nie działa poprawnie, krzaczy się w jednym miejscu
+// działa
 public class CountingWords {
     Map<String, Integer> countWord(String text) {
         Map<String, Integer> counter = new HashMap<>();
         String[] words = text.split(" "); // ma zamienić podany tekst na tablice Stringow
         for (String word : words) {
             if (counter.containsKey(word)) {
-                // TU SIĘ krzaczy
-                counter[word] += 1; // jak już jest to zwieksz "wartość"
+                // tu był BŁĄD: to jest MAPA, a nie tablica, wiec zamiast "counter[word] += 1;" MA BYĆ:
+                counter.put(word, counter.get(word) + 1); // jak już jest to zwiększ "wartość"
             } else {
                 counter.put(word, 1); // a jak nie ma to dodaj do mapy, "wartość" ustaw na jeden
             }
