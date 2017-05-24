@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class KozakZadanie3 {
     Scanner myScanner = new Scanner(System.in);
 
+    //takeWeight oraz takeHeight to jest duplikacja kodu. Może lepiej byłoby po prostu stworzyć funkcję readInput.
     double takeWeight() {
         return myScanner.nextDouble();
     }
@@ -13,6 +14,8 @@ public class KozakZadanie3 {
         return myScanner.nextDouble();
     }
 
+    //funkcja powinna nazywac się calculateBmi.
+    //count sugeruje, że liczona jest ilość a nie wartość
     double countBMI(double weight, double height){
         return weight/(height*height);
     }
@@ -22,6 +25,10 @@ public class KozakZadanie3 {
 
         System.out.println("Twoje BMI to: " + BMI);
 
+        //magiczne cyferki. lepiej zastąpić je zmiennymi/stałymi, których nazwa wskazywałaby znaczenie tych liczb.
+        //Tekst wypisywany na konsole można by zapisać do zmiennej i mieć tylko jeden raz System.out.println.
+        //To na wypadek gdyby zaszłapotrzeba zwrócenia tego tekstu w innej postaci. Wtedy zmiana byłaby tylko w jednym miejscu a nie trzech.
+        //Warte rozważenia byłoby stworzenie klasy BmiCalculator, która w konstruktorze dostałaby wzrost i wagę a metoda Calculate zwracałaby test.
         if (BMI < 18.5) {
             System.out.println("Niedowaga");
         } else if (BMI >= 18.5 & BMI <= 24.9) {
