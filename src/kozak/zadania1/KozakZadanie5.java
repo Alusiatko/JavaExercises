@@ -37,6 +37,10 @@ public class KozakZadanie5 {
 
     }
 
+    //zamiłowanie do magicznych cyferek. tutaj aż się prosi aby były to stałe raz zadeklarowane.
+    //z racji tego, że wartości wielokrotnie występują w kodzie 
+    //jakakolwiek zmiana wymagań niesie za sobą ryzyko, że nie wszystkie wystąpienia zostaną zmienione.
+    //tutaj jest prosty kod, natomiast kod produkcyjny aplikacji biznesowych może mieć tysiące lini.
     void askForInstallment() {
         do {
             System.out.println("Please provide number of installments in between 6 and 96"); // celowo zwiekszone
@@ -75,6 +79,7 @@ public class KozakZadanie5 {
 
         double installment = kozakZadanie5.countInstallment();
 
+        //String.format byłby lepszym rozwiązaniem niż konkatenacja
         System.out.println("When you have " + kozakZadanie5.numberOfInstallment + " rates, your installment will be " + installment);
 
 /*      kozakZadanie5.isGoodPrice(kozakZadanie5.itemPrice);
