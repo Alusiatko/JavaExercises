@@ -14,16 +14,23 @@ public class KozakZadanie6 {
         return myScanner.nextDouble();
     }
 
+    //takeOperator
     String takeSign() {
         System.out.println("Please provide sign");
         return myScanner.next().trim();             // nextLine() nie działał, trim() ucina puste miejsca
     }
-
+    
+    //bardzo podobne do takeFirstNumber. 
+    //lepiej nazwać funkcje takeNumber i jako parametr przekazać tekst, który będzie wyświetlany na konsoli.
+    //w takim pzypadku łatwiej będzie rozszerzać kod
     double takeSecondNumber() {
         System.out.println("Please provide second number");
         return myScanner.nextDouble();
     }
 
+    //calculate
+    //lepiej jak by funkcja zwracała wartość a nie wypisywała na konsole. niech wypisywaniem zajmie się inny fragment kodu.
+    //w tym przypadku metoda main
     void count(double a, String sign, double b) {
         System.out.println(a + sign + b + " =");
 
