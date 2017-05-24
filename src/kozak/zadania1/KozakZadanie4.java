@@ -10,8 +10,12 @@ public class KozakZadanie4 {
         return myScanner.nextDouble();
     }
 
+    //funkcja powinna nazywać się calculateTax
+    //count sugeruje, że liczona jest ilość a nie wartość
+    //równie dobrze można by stworzyć klasę, która akceptowałaby kwote przychodu i udostępniała metodę calculate.
     double countTax(double income) {
 
+        //magiczne liczby, sugeruje stworzyć zmienne, które miałyby nazwę jednoznacznie wskazujące na cel.
         if (income < 85528) {
            return 0.18*income;
         } else {
