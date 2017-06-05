@@ -4,6 +4,10 @@ public class HashCodeEqualsExample {
     public static void main(String[] args) {
         Integer integerOne = new Integer(12345678);
         Integer integerTwo = new Integer(12345678);
+
+        System.out.println(integerOne.hashCode());
+        System.out.println(integerTwo.hashCode());
+
         if (integerOne == integerTwo) {
             System.out.println("integerOne is equal to integerTwo when using \"==\"");
         } else {
